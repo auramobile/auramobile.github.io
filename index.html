@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AURA — Where Technology Meets Luxury</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#02040a;--panel:#070b13;--panel2:#0b1220;--text:#f7fbff;--muted:#91a0b4;--cyan:#57dcff;--blue:#587bff;--violet:#a66cff;--gold:#dfbb66;--green:#67d19a;--line:rgba(130,170,255,.16);--shadow:0 30px 100px rgba(0,0,0,.45)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden}a{text-decoration:none;color:inherit}button,input{font:inherit}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}.cursor{position:fixed;width:300px;height:300px;left:-1000px;top:-1000px;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(87,220,255,.12),rgba(166,108,255,.04) 38%,transparent 70%);filter:blur(8px)}
+.container{width:min(1200px,92%);margin:auto}.topbar{height:32px;background:#05070c;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:2px;color:#94a5ba;text-transform:uppercase}.topbar b{color:var(--cyan)}
+nav{position:sticky;top:0;z-index:30;background:rgba(2,4,10,.72);backdrop-filter:blur(22px);border-bottom:1px solid rgba(130,170,255,.1)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand img{height:50px;width:50px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(87,220,255,.18))}.links{display:flex;gap:26px;color:#aebbd0;font-size:13px}.links a:hover{color:#fff;text-shadow:0 0 18px var(--cyan)}.nav-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid rgba(130,170,255,.25);padding:10px 15px;border-radius:30px;font-size:12px}.cart{position:relative}.cart span{position:absolute;right:-5px;top:-7px;background:var(--cyan);color:#00111a;width:17px;height:17px;border-radius:50%;font-size:9px;display:grid;place-items:center;font-weight:800}
+.hero{min-height:calc(100vh - 108px);display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 45%,rgba(55,128,255,.16),transparent 32%),radial-gradient(circle at 18% 72%,rgba(156,76,255,.09),transparent 28%)}.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:20px;padding:70px 0}.eyebrow{font-size:10px;letter-spacing:5px;color:var(--cyan);font-weight:800;text-transform:uppercase}.hero h1{font:700 clamp(54px,7vw,94px)/.9 "Space Grotesk";letter-spacing:-5px;margin:18px 0}.gradient{background:linear-gradient(90deg,#fff,var(--cyan),#a66cff,#fff);background-size:240% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:shine 5s linear infinite}.hero-copy{color:var(--muted);font-size:17px;line-height:1.8;max-width:580px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border-radius:30px;padding:14px 21px;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;cursor:pointer}.primary{background:linear-gradient(100deg,var(--cyan),#6885ff);color:#03101a;box-shadow:0 0 35px rgba(87,220,255,.15)}.ghost{border-color:rgba(130,170,255,.25);background:rgba(255,255,255,.025)}.btn:hover{transform:translateY(-2px)}.hero-visual{position:relative;min-height:670px;display:grid;place-items:center}.hero-visual img{width:90%;max-height:690px;object-fit:contain;filter:drop-shadow(0 35px 40px rgba(0,0,0,.8)) drop-shadow(0 0 65px rgba(75,150,255,.25));animation:float 5s ease-in-out infinite}.ring{position:absolute;width:580px;height:580px;border:1px solid rgba(87,220,255,.14);border-radius:50%;box-shadow:0 0 100px rgba(87,220,255,.06),inset 0 0 100px rgba(166,108,255,.05);animation:spin 24s linear infinite}.ring:before,.ring:after{content:"";position:absolute;border:1px dashed rgba(166,108,255,.25);border-radius:50%}.ring:before{inset:65px}.ring:after{inset:145px;border-color:rgba(87,220,255,.18)}.floating-badge{position:absolute;padding:13px 16px;background:rgba(5,10,19,.7);border:1px solid var(--line);backdrop-filter:blur(14px);border-radius:15px;font-size:10px;letter-spacing:1px;box-shadow:var(--shadow)}.b1{right:3%;top:16%;color:var(--cyan)}.b2{left:2%;bottom:20%;color:var(--gold)}
+section{padding:105px 0;position:relative}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}.section-head h2{font:700 44px/1 "Space Grotesk";letter-spacing:-2px;margin:0}.section-head p{max-width:560px;color:var(--muted);line-height:1.7;margin:0}.eyebrow2{color:var(--cyan);font-size:10px;letter-spacing:4px;text-transform:uppercase;font-weight:800;margin-bottom:12px}
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.model{background:linear-gradient(150deg,rgba(15,24,40,.9),rgba(4,7,12,.96));border:1px solid var(--line);border-radius:25px;overflow:hidden;transition:.35s}.model:hover{transform:translateY(-8px);border-color:rgba(87,220,255,.4);box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 40px rgba(87,220,255,.06)}.model-media{height:430px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(70,130,255,.1),transparent 60%)}.model-media img{width:100%;height:100%;object-fit:cover;transition:.5s}.model:hover img{transform:scale(1.035)}.badge{position:absolute;top:15px;left:15px;padding:8px 11px;border-radius:20px;background:rgba(2,5,10,.65);border:1px solid var(--line);backdrop-filter:blur(12px);font-size:9px;letter-spacing:2px;text-transform:uppercase}.model-body{padding:24px}.model h3{font:700 31px "Space Grotesk";margin:5px 0}.model p{color:var(--muted);line-height:1.65;font-size:13px}.spec-mini{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.spec-mini span{border:1px solid var(--line);padding:7px 9px;border-radius:8px;color:#c8d3e1;font-size:10px}.price{font-size:21px;font-weight:800;color:var(--cyan);margin:18px 0}.lite .price{color:var(--green)}.ultra .price{color:var(--gold)}
+.compare{background:#050810;border-block:1px solid var(--line)}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px}.compare table{border-collapse:collapse;width:100%;min-width:760px}.compare th,.compare td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:13px}.compare th{background:#0a101c;color:#fff}.compare td{color:#aeb9c8}.compare td:first-child{color:#fff;font-weight:700}.compare tr:last-child td{border-bottom:0}
+.tech{background:linear-gradient(180deg,#02040a,#050a14,#02040a);overflow:hidden}.tech:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(87,220,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(87,220,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{padding:25px;border:1px solid var(--line);background:rgba(8,14,24,.72);border-radius:19px;backdrop-filter:blur(14px);transition:.3s}.feature:hover{transform:translateY(-5px);border-color:rgba(87,220,255,.4)}.feature .num{color:var(--cyan);font:700 11px "Space Grotesk"}.feature h3{font:700 19px "Space Grotesk"}.feature p{color:var(--muted);font-size:13px;line-height:1.6}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.visual-card{border:1px solid var(--line);border-radius:25px;overflow:hidden;min-height:580px;background:#05070d;position:relative}.visual-card img{width:100%;height:100%;object-fit:cover}.visual-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.9))}.visual-caption{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}.visual-caption small{color:var(--cyan);letter-spacing:3px;text-transform:uppercase}.visual-caption h3{font:700 32px "Space Grotesk";margin:7px 0}.visual-caption p{color:#d2d8e2;line-height:1.5}.panel{border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,#09111e,#04070d);padding:34px}.panel h3{font:700 31px "Space Grotesk";margin:0 0 14px}.panel>p{color:var(--muted);line-height:1.7}.rows{display:grid;gap:11px;margin-top:25px}.row{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.row span:first-child{color:#8898ac}.row b{color:#fff;text-align:right}
+.camera{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.camera-img{height:560px;border-radius:25px;overflow:hidden;border:1px solid var(--line)}.camera-img img{width:100%;height:100%;object-fit:cover}.bullet{display:grid;gap:14px;margin-top:25px}.bullet div{padding:16px;border-left:2px solid var(--cyan);background:rgba(87,220,255,.035);color:#c7d0dc;font-size:13px;line-height:1.5}
+.amb{display:grid;grid-template-columns:1fr 1fr;gap:20px}.amb-card{height:650px;border:1px solid var(--line);border-radius:25px;overflow:hidden;position:relative;background:#05070d}.amb-card img{width:100%;height:100%;object-fit:cover;transition:.8s}.amb-card:hover img{transform:scale(1.04)}.amb-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.92))}.amb-caption{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}.amb-caption small{color:var(--cyan);letter-spacing:3px;text-transform:uppercase}.amb-caption h3{font:700 31px "Space Grotesk";margin:7px 0}.amb-caption p{color:#ccd5df}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:250px;gap:15px}.gallery figure{margin:0;overflow:hidden;border-radius:20px;border:1px solid var(--line);position:relative;background:#05070c}.gallery figure:first-child{grid-row:span 2}.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}.gallery figure:hover img{transform:scale(1.05)}.gallery figcaption{position:absolute;left:16px;bottom:15px;background:rgba(0,0,0,.6);padding:8px 10px;border-radius:9px;font-size:10px;backdrop-filter:blur(8px)}
+.eco{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.eco-card{padding:23px;border:1px solid var(--line);border-radius:18px;background:#070b13}.eco-card .icon{font-size:24px}.eco-card h3{font:700 17px "Space Grotesk"}.eco-card p{color:var(--muted);font-size:12px;line-height:1.6}
+.faq{max-width:900px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq summary{cursor:pointer;font-weight:700;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq p{color:var(--muted);line-height:1.7;font-size:13px;max-width:780px}.newsletter{padding:80px 0;background:radial-gradient(circle at 50% 0,rgba(87,220,255,.12),transparent 45%);text-align:center;border-top:1px solid var(--line)}.newsletter h2{font:700 45px "Space Grotesk";margin:0}.newsletter p{color:var(--muted)}.email{display:flex;max-width:500px;margin:25px auto 0;background:#070c14;border:1px solid var(--line);padding:6px;border-radius:35px}.email input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:0 16px}.email button{border:0}.modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);z-index:100}.modal.open{display:grid}.modal-box{width:min(720px,92%);background:#080d17;border:1px solid rgba(87,220,255,.25);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.modal-top{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:1px solid var(--line);color:white;border-radius:50%;width:35px;height:35px;cursor:pointer}.modal h2{font:700 32px "Space Grotesk"}.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{padding:14px;border:1px solid var(--line);border-radius:12px;cursor:pointer}.choice:hover{border-color:var(--cyan)}footer{border-top:1px solid var(--line);padding:35px 0;color:#718096;font-size:11px}.foot{display:flex;justify-content:space-between}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-15px) rotate(1deg)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes shine{to{background-position:240% center}}
+@media(max-width:900px){.links{display:none}.hero-grid,.split,.camera{grid-template-columns:1fr}.hero-visual{min-height:560px}.models{grid-template-columns:1fr}.feature-grid,.eco{grid-template-columns:1fr 1fr}.amb{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:span 2}.section-head{display:block}.section-head p{margin-top:12px}}
+@media(max-width:560px){.feature-grid,.eco,.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-column:auto;grid-row:auto}.nav-actions .pill{display:none}.hero h1{font-size:53px}.hero-visual{min-height:480px}.ring{width:390px;height:390px}.hero-visual img{width:100%}.amb-card{height:540px}.camera-img{height:430px}.foot{display:block;line-height:2}}
+
+.nav-actions{display:flex;align-items:center;gap:10px}.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(130,170,255,.25);background:rgba(255,255,255,.025);color:#eaf5ff;font-size:23px;cursor:pointer}.icon-btn:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(85,217,255,.14)}
+.quickbar{padding:14px 0;border-bottom:1px solid var(--line);background:rgba(5,9,16,.8)}.quickbar-inner{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.quick{padding:9px 15px;border-radius:18px;border:1px solid rgba(130,170,255,.16);color:#aebccd;font-size:12px;background:rgba(255,255,255,.02)}.quick:hover{color:#fff;border-color:rgba(85,217,255,.4)}
+.badge-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.badge{border:1px solid rgba(85,217,255,.2);background:rgba(85,217,255,.045);border-radius:20px;padding:8px 12px;color:#b9c9d9;font-size:11px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}.stat{padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(8,13,23,.7)}.stat strong{display:block;font:700 25px "Space Grotesk";color:#fff}.stat span{font-size:11px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:250px 250px;gap:14px}.gallery-item{position:relative;overflow:hidden;border-radius:22px;border:1px solid var(--line);background:#080c14}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.6s}.gallery-item:hover img{transform:scale(1.06)}.gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.75));pointer-events:none}.gallery-label{position:absolute;z-index:2;left:18px;bottom:16px;font:600 15px "Space Grotesk";color:#fff}.gallery-label small{display:block;color:#9fb0c3;font:11px Inter;margin-top:4px}
+.spec-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(7,11,19,.65)}.spec-table th,.spec-table td{padding:15px 18px;border-bottom:1px solid var(--line);text-align:left}.spec-table th{color:#eaf5ff;font-size:12px}.spec-table td{color:#9eacbc;font-size:12px}.spec-table tr:last-child td{border-bottom:0}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.why{padding:28px;border-radius:21px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(12,18,30,.9),rgba(5,7,12,.9))}.why .big{font:700 36px "Space Grotesk";color:var(--cyan)}.why h3{font:700 20px "Space Grotesk";margin:12px 0 7px}.why p{color:var(--muted);line-height:1.65;font-size:13px}
+.support{display:grid;grid-template-columns:1fr 1fr;gap:18px}.support-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:#080c14}.support-card h3{font:700 23px "Space Grotesk";margin-top:0}.support-card p,.support-card li{color:var(--muted);line-height:1.7;font-size:13px}.support-card ul{padding-left:18px}
+.search-modal{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(15px);z-index:100;display:none;place-items:start center;padding-top:120px}.search-modal.open{display:grid}.search-box{width:min(650px,90%);background:#090e18;border:1px solid rgba(85,217,255,.35);border-radius:22px;padding:22px;box-shadow:0 25px 100px rgba(0,0,0,.6)}.search-box input{width:100%;padding:16px 18px;border-radius:14px;border:1px solid #26374c;background:#050810;color:#fff;outline:none;font-size:16px}.search-hint{color:#7e8da0;font-size:11px;margin-top:12px}
+@media(max-width:850px){.stats{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px}.gallery-item:first-child{grid-row:span 2}.why-grid,.support{grid-template-columns:1fr}.nav-actions .navbtn{display:none}}
+@media(max-width:520px){.stats{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr;grid-template-rows:300px 220px 220px 220px}.gallery-item:first-child{grid-row:auto}}
+
+.quickbar{padding:13px 0;border-bottom:1px solid var(--line);background:rgba(5,9,16,.8)}.quickbar-inner{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}.quick{padding:8px 14px;border-radius:18px;border:1px solid rgba(130,170,255,.16);color:#aebccd;font-size:11px;background:rgba(255,255,255,.02)}.quick:hover{color:#fff;border-color:rgba(85,217,255,.4)}
+.nav-actions{display:flex;align-items:center;gap:9px}.icon-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(130,170,255,.25);background:rgba(255,255,255,.025);color:#eaf5ff;font-size:22px;cursor:pointer}.icon-btn:hover{border-color:var(--cyan);box-shadow:0 0 20px rgba(85,217,255,.14)}
+.hero-visual{height:580px;position:relative;display:grid;place-items:center}.hero-phone{position:absolute;width:430px;max-height:560px;object-fit:contain;filter:drop-shadow(0 25px 35px rgba(0,0,0,.8)) drop-shadow(0 0 50px rgba(75,170,255,.22));animation:float 5s ease-in-out infinite}.service-orbit{position:absolute;border:1px solid rgba(85,217,255,.18);border-radius:50%;animation:spin 18s linear infinite}.orbit-one{width:480px;height:480px}.orbit-two{width:330px;height:330px;border-color:rgba(154,98,255,.22);animation-duration:12s;animation-direction:reverse}.service-core{position:absolute;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(85,217,255,.25),rgba(5,10,18,.85) 65%);border:1px solid rgba(85,217,255,.4);display:grid;place-items:center;text-align:center;z-index:0;box-shadow:0 0 50px rgba(85,217,255,.13)}.service-core .core-symbol{font:700 35px "Space Grotesk";color:#fff}.service-core strong{font-size:11px;letter-spacing:4px}.service-core span{font-size:7px;color:#8294aa}.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.badge{border:1px solid rgba(85,217,255,.2);background:rgba(85,217,255,.04);border-radius:20px;padding:8px 11px;color:#b9c9d9;font-size:10px}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service-card{position:relative;padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(12,18,30,.9),rgba(5,7,12,.94));overflow:hidden;transition:.35s}.service-card:hover{transform:translateY(-7px);border-color:rgba(85,217,255,.42);box-shadow:0 25px 65px rgba(0,0,0,.35),0 0 35px rgba(85,217,255,.07)}.service-card.featured{border-color:rgba(85,217,255,.4);background:radial-gradient(circle at 90% 10%,rgba(85,217,255,.1),transparent 45%),linear-gradient(145deg,#0b1421,#05070c)}.service-number{position:absolute;top:24px;right:25px;color:#50647b;font:700 12px "Space Grotesk"}.service-icon{font-size:30px;color:var(--cyan);height:38px}.service-card h3{font:700 26px "Space Grotesk";margin:12px 0 8px}.service-card p{color:var(--muted);line-height:1.65;font-size:13px}.service-card ul{padding-left:18px;margin:18px 0;color:#aebdcd;font-size:12px;line-height:1.9}.service-card a,.support-card a{color:var(--cyan);font-size:12px;font-weight:700}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.benefit{padding:26px;border:1px solid var(--line);border-radius:20px;background:#080d16}.benefit>span{font:700 12px "Space Grotesk";color:var(--cyan)}.benefit h3{font:700 20px "Space Grotesk";margin:14px 0 7px}.benefit p{font-size:12px;color:var(--muted);line-height:1.7}
+.secure-panel{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.secure-copy h2{font:700 55px "Space Grotesk";letter-spacing:-2px;margin:15px 0}.secure-copy h2 span{color:var(--cyan)}.secure-copy>p{color:var(--muted);line-height:1.8;max-width:560px}.secure-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.secure-points div{padding:16px;border:1px solid var(--line);border-radius:15px;background:#080d15}.secure-points b{display:block;font-size:12px}.secure-points span{display:block;color:var(--muted);font-size:10px;line-height:1.5;margin-top:5px}.secure-visual{height:480px;position:relative;display:grid;place-items:center}.shield{width:150px;height:175px;clip-path:polygon(50% 0,92% 18%,84% 72%,50% 100%,16% 72%,8% 18%);background:linear-gradient(145deg,#56dcff,#4e66ff);display:grid;place-items:center;font:700 60px "Space Grotesk";color:#fff;z-index:2;box-shadow:0 0 80px rgba(85,217,255,.3)}.secure-ring{position:absolute;border:1px solid rgba(85,217,255,.18);border-radius:50%;animation:spin 15s linear infinite}.r1{width:260px;height:260px}.r2{width:360px;height:360px;border-color:rgba(154,98,255,.2);animation-direction:reverse}.r3{width:450px;height:450px;border-color:rgba(227,189,103,.13);animation-duration:25s}.secure-visual>span{position:absolute;bottom:20px;color:#6e8094;font-size:10px;letter-spacing:4px}
+.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.journey>div{position:relative;padding:24px 15px;border-top:1px solid #314255}.journey>div:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan);top:-4px;left:15px}.journey span{font:700 10px "Space Grotesk";color:#60758b}.journey h3{font:700 17px "Space Grotesk";margin:12px 0 5px}.journey p{font-size:10px;color:var(--muted);line-height:1.6}.ecosystem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.eco{min-height:150px;padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#0a111c,#05070c);display:flex;flex-direction:column;justify-content:end;transition:.3s}.eco:hover{transform:translateY(-5px);border-color:rgba(85,217,255,.35)}.eco b{font:700 22px "Space Grotesk"}.eco span{color:var(--muted);font-size:11px;margin-top:5px}.support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.support-card{padding:25px;border:1px solid var(--line);border-radius:19px;background:#080d15}.support-card h3{font:700 19px "Space Grotesk";margin-top:0}.support-card p{color:var(--muted);font-size:12px;line-height:1.65}.search-modal{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(15px);z-index:100;display:none;place-items:start center;padding-top:120px}.search-modal.open{display:grid}.search-box{width:min(650px,90%);background:#090e18;border:1px solid rgba(85,217,255,.35);border-radius:22px;padding:22px}.search-box input{width:100%;padding:16px;border-radius:14px;border:1px solid #26374c;background:#050810;color:#fff;outline:none}.search-hint{color:#7e8da0;font-size:11px;margin-top:10px}
+@media(max-width:900px){.service-grid{grid-template-columns:1fr 1fr}.benefit-grid{grid-template-columns:1fr 1fr}.journey{grid-template-columns:repeat(3,1fr)}.ecosystem-grid{grid-template-columns:1fr 1fr}.support-grid{grid-template-columns:1fr 1fr}.secure-panel{grid-template-columns:1fr}.hero-visual{height:500px}}
+@media(max-width:600px){.links{display:none}.service-grid,.benefit-grid,.ecosystem-grid,.support-grid{grid-template-columns:1fr}.journey{grid-template-columns:1fr 1fr}.secure-points{grid-template-columns:1fr}.hero-visual{height:430px}.hero-phone{width:330px}.orbit-one{width:360px;height:360px}.orbit-two{width:250px;height:250px}}
+
+body{background:#02040a}
+.page-hero{padding:155px 0 90px;min-height:55vh;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,rgba(55,185,255,.13),transparent 32%),radial-gradient(circle at 15% 85%,rgba(130,65,255,.08),transparent 30%);position:relative;overflow:hidden}
+.page-hero h1{font:700 clamp(48px,7vw,82px) "Space Grotesk";letter-spacing:-3px;margin:15px 0}
+.page-hero h1 span{color:#55d9ff}
+.page-hero p{max-width:650px;color:#93a1b4;line-height:1.8;font-size:16px}
+.content-section{padding:100px 0}
+.content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.content-card{padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#0a111c,#05070c);transition:.3s}
+.content-card:hover{transform:translateY(-6px);border-color:rgba(85,217,255,.38);box-shadow:0 20px 55px rgba(0,0,0,.35)}
+.content-card .icon{font-size:28px;color:#55d9ff}
+.content-card h3{font:700 24px "Space Grotesk";margin:14px 0 8px}
+.content-card p,.content-card li{color:#96a5b7;line-height:1.7;font-size:13px}
+.content-card ul{padding-left:18px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.big-panel{padding:38px;border:1px solid var(--line);border-radius:25px;background:radial-gradient(circle at 90% 10%,rgba(85,217,255,.1),transparent 35%),#080d15}
+.big-panel h2{font:700 42px "Space Grotesk";margin:0 0 14px}
+.big-panel p{color:#96a5b7;line-height:1.8}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.step{padding:25px 18px;border-top:1px solid #3a4b5e;position:relative}
+.step:before{content:"";position:absolute;top:-5px;left:18px;width:9px;height:9px;border-radius:50%;background:#55d9ff;box-shadow:0 0 15px #55d9ff}
+.step b{font:700 13px "Space Grotesk";color:#5cd9ff}.step h3{font:700 18px "Space Grotesk";margin:12px 0 5px}.step p{font-size:11px;color:#7f8ea1;line-height:1.6}
+.faq{max-width:850px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:22px 0}.faq summary{cursor:pointer;font:600 17px "Space Grotesk"}.faq p{color:#8e9caf;line-height:1.7;font-size:13px}
+.form{display:grid;gap:13px}.form input,.form textarea,.form select{width:100%;padding:15px;border:1px solid #26374c;border-radius:12px;background:#050810;color:#fff;outline:none;font:14px Inter}.form textarea{min-height:130px;resize:vertical}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+@media(max-width:850px){.content-grid,.two-col{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.process{grid-template-columns:1fr}.page-hero{padding-top:125px}}
+
+/* AURA MAGIC UI */
+:root{--aura-purple:#b85cff;--aura-cyan:#55d9ff;--aura-gold:#ffc85a}
+body{overflow-x:hidden}
+#magic-stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55}
+nav,.hero,.page-hero,.content-section,.magic,footer{position:relative;z-index:1}
+.nav{position:relative;z-index:20}
+.nav a{transition:color .25s, text-shadow .25s, transform .25s}
+.nav a:hover{color:#fff;text-shadow:0 0 14px var(--aura-cyan);transform:translateY(-1px)}
+.magic-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(184,92,255,.35);border-radius:999px;background:rgba(105,48,160,.12);box-shadow:0 0 22px rgba(184,92,255,.12);font-size:11px;color:#d9c6ff}
+.magic-badge .spark{animation:sparkle 1.4s infinite}
+@keyframes sparkle{0%,100%{transform:scale(1) rotate(0);filter:brightness(1)}50%{transform:scale(1.35) rotate(12deg);filter:brightness(1.8)}}
+.magic-orb{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(184,92,255,.22),rgba(85,217,255,.08) 38%,transparent 70%);filter:blur(3px);animation:orbfloat 8s ease-in-out infinite;pointer-events:none}
+@keyframes orbfloat{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(25px,-22px,0) scale(1.08)}}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.magic-card{position:relative;overflow:hidden}
+.magic-card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.14) 45%,transparent 65%);transform:translateX(-130%);transition:transform .8s ease}
+.magic-card:hover:before{transform:translateX(130%)}
+.magic-card:after{content:"✦";position:absolute;right:16px;top:12px;color:rgba(184,92,255,.75);font-size:13px;animation:twinkle 2s infinite}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+.emoji-icon{font-size:30px;display:inline-block;filter:drop-shadow(0 0 10px rgba(85,217,255,.25));animation:emojiFloat 3s ease-in-out infinite}
+@keyframes emojiFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(2deg)}}
+.magnetic-btn{transition:transform .18s ease,box-shadow .25s ease}
+.magnetic-btn:hover{box-shadow:0 0 28px rgba(184,92,255,.35)}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:15px 0;background:rgba(5,8,16,.45)}
+.marquee-track{display:inline-block;animation:marquee 24s linear infinite;color:#8091a6;font:600 12px "Space Grotesk";letter-spacing:2px}
+.marquee-track span{margin:0 35px;color:#bda2ff}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.generated-visual{width:100%;border-radius:28px;border:1px solid rgba(85,217,255,.18);box-shadow:0 25px 80px rgba(0,0,0,.45),0 0 50px rgba(120,70,255,.12);object-fit:cover}
+.scroll-indicator{position:fixed;right:18px;top:50%;width:3px;height:80px;border-radius:10px;background:rgba(255,255,255,.08);z-index:50}
+.scroll-indicator i{display:block;width:100%;height:30%;background:linear-gradient(#55d9ff,#b85cff);border-radius:10px;transition:transform .15s}
+
+/* AURA FORMAL LUXURY THEME */
+:root{
+  --aura-bg:#05070a;
+  --aura-panel:#0b0f14;
+  --aura-panel2:#10151c;
+  --aura-gold:#d7aa55;
+  --aura-gold2:#f0d08a;
+  --aura-white:#f6f4ef;
+  --aura-muted:#a9adb3;
+  --aura-line:rgba(215,170,85,.22);
+}
+html{scroll-behavior:smooth}
+body{
+  background:radial-gradient(circle at 70% 0%,rgba(215,170,85,.055),transparent 28%),var(--aura-bg)!important;
+  color:var(--aura-white)!important;
+}
+#magic-stars{opacity:.12!important}
+.magic-orb{opacity:.18!important;background:radial-gradient(circle,rgba(215,170,85,.18),transparent 68%)!important}
+.nav a:hover{color:var(--aura-gold2)!important;text-shadow:0 0 12px rgba(215,170,85,.22)!important}
+.magic-badge{
+  border-color:var(--aura-line)!important;
+  background:rgba(215,170,85,.045)!important;
+  color:var(--aura-gold2)!important;
+}
+.magic-badge .spark{color:var(--aura-gold2)}
+.btn,.button{border-radius:6px!important}
+.btn.primary,.magnetic-btn{
+  background:linear-gradient(135deg,var(--aura-gold2),var(--aura-gold))!important;
+  color:#080a0d!important;
+  box-shadow:0 8px 30px rgba(215,170,85,.14)!important;
+}
+.content-card,.magic-card,.big-panel{
+  background:linear-gradient(145deg,rgba(16,21,28,.98),rgba(8,11,15,.98))!important;
+  border-color:var(--aura-line)!important;
+  box-shadow:0 18px 55px rgba(0,0,0,.32)!important;
+}
+.magic-card:before{background:linear-gradient(115deg,transparent 35%,rgba(240,208,138,.09) 50%,transparent 65%)!important}
+.magic-card:after{color:rgba(215,170,85,.7)!important}
+.emoji-icon{filter:grayscale(.15) sepia(.35) drop-shadow(0 0 8px rgba(215,170,85,.18))!important}
+.marquee{background:#07090c!important;border-color:var(--aura-line)!important}
+.marquee-track{color:#7f858d!important}
+.marquee-track span{color:var(--aura-gold2)!important}
+.scroll-indicator i{background:linear-gradient(var(--aura-gold2),var(--aura-gold))!important}
+h1,h2,h3,h4{letter-spacing:-.02em}
+a{transition:color .25s ease,opacity .25s ease}
+section{position:relative}
+section:before{
+  content:"";
+  position:absolute;left:5%;right:5%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--aura-line),transparent);
+  opacity:.6;
+}
+.reveal{transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.2,1)!important}
+</style></head><body><canvas id="magic-stars"></canvas><div class="magic-orb" style="right:-120px;top:160px"></div><div class="scroll-indicator"><i></i></div><canvas id="particles"></canvas><div class="cursor-glow"></div>
+<nav><div class="container nav">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="AURA"></a>
+<div class="links">
+<a href="services.html">Services</a>
+<a href="secure.html">AURA Secure</a>
+<a href="care.html">AURA Care</a>
+<a href="exchange.html">Exchange</a>
+<a href="about.html">About AURA</a>
+<a href="support.html">Support</a>
+</div>
+<a class="navbtn" href="services.html">Explore AURA</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="container hero-grid">
+<div><div class="eyebrow">WHERE TECHNOLOGY MEETS LUXURY</div>
+<h1>More than a phone.<br><span class="gradient">AURA is an experience.</span></h1>
+<p>Discover a technology company built around products, privacy, care, upgrades and long-term customer relationships.</p>
+<div class="actions"><a class="btn primary magnetic-btn" href="services.html">Explore Services</a><a class="btn secondary" href="about.html">About AURA</a></div>
+<div class="badge-row"><span class="badge">Customer First</span><span class="badge">Privacy Focused</span><span class="badge">Premium Service</span><span class="badge">Long-Term Support</span></div>
+</div>
+<div class="hero-visual"><div class="service-orbit orbit-one"></div><div class="service-orbit orbit-two"></div><div class="service-core"><div class="core-symbol">A</div><strong>AURA</strong><span>Customer Experience</span></div><img src="assets/aura-ultra.png" class="hero-phone" alt="AURA Ultra"></div>
+</div></header>
+<section class="content-section" id="services"><div class="container">
+<div class="section-head"><h2>Explore AURA</h2><p>Choose an area to discover how AURA supports customers beyond the smartphone.</p></div>
+<div class="content-grid">
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">✦</div><h3>AURA Services</h3><p>Explore the complete service ecosystem.</p><a href="services.html">View Services →</a></div>
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">🔒</div><h3>AURA Secure</h3><p>Privacy, security and account protection.</p><a href="secure.html">Explore Secure →</a></div>
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">♡</div><h3>AURA Care</h3><p>After-sales support, warranty and service.</p><a href="care.html">Explore Care →</a></div>
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">↻</div><h3>Exchange & Upgrade</h3><p>A simpler route to your next AURA device.</p><a href="exchange.html">Explore →</a></div>
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">◎</div><h3>About AURA</h3><p>Our vision, mission and company values.</p><a href="about.html">Discover AURA →</a></div>
+<div class="content-card magic-card reveal"><div class="icon emoji-icon">☎</div><h3>Support</h3><p>Get help whenever you need it.</p><a href="support.html">Get Support →</a></div>
+</div></div></section>
+
+<section class="content-section" id="magic-gallery"><div class="container">
+<div class="section-head reveal"><div class="magic-badge"><span class="spark">✨</span> AURA MAGIC GALLERY</div><h2>Technology with a little <span style="color:#c77dff">magic.</span></h2><p>Premium visuals, immersive service experiences and a brand identity designed to feel alive.</p></div>
+<div class="two-col reveal">
+<div><img class="generated-visual" src="assets/aura-generated-magic.png" alt="AURA generated futuristic service experience"></div>
+<div class="big-panel magic-card"><div class="emoji-icon">🌌</div><h2>Explore the AURA universe.</h2><p>Animated particles, glowing interfaces, interactive cards, magical transitions and cinematic service visuals make the AURA website feel like a technology ecosystem rather than a normal company page.</p>
+<div class="badge-row"><span class="badge">✨ Magical UI</span><span class="badge">🌠 Sliding Effects</span><span class="badge">🔮 Glass Cards</span><span class="badge">💫 Animated Stars</span></div>
+</div></div>
+</div></section>
+<div class="marquee"><div class="marquee-track">✦ AURA SECURE <span>🔐</span> ✦ AURA CARE <span>🛠️</span> ✦ AURA EXCHANGE <span>🔄</span> ✦ AURA CLOUD <span>☁️</span> ✦ AURA REWARDS <span>🎁</span> ✦ 24/7 SUPPORT <span>💬</span> ✦ AURA SECURE <span>🔐</span> ✦ AURA CARE <span>🛠️</span> ✦ AURA EXCHANGE <span>🔄</span> ✦ AURA CLOUD <span>☁️</span> ✦ AURA REWARDS <span>🎁</span> ✦ 24/7 SUPPORT <span>💬</span></div></div>
+<section class="content-section dark" id="benefits"><div class="container">
+<div class="section-head"><h2>The AURA Difference</h2><p>We believe the relationship with a customer should continue long after the purchase.</p></div>
+<div class="process"><div class="step"><b>01</b><h3>Discover</h3><p>Explore AURA and find the right experience.</p></div><div class="step"><b>02</b><h3>Purchase</h3><p>Start your AURA journey.</p></div><div class="step"><b>03</b><h3>Protect</h3><p>Secure your data and device.</p></div><div class="step"><b>04</b><h3>Care</h3><p>Receive ongoing support.</p></div><div class="step"><b>05</b><h3>Upgrade</h3><p>Move forward when you're ready.</p></div><div class="step"><b>06</b><h3>Belong</h3><p>Enjoy rewards and the AURA community.</p></div></div>
+</div></section>
+<section class="content-section"><div class="container two-col"><div class="big-panel"><div class="eyebrow">AURA SECURE</div><h2>Your privacy.<br><span style="color:#55d9ff">Our priority.</span></h2><p>Privacy and security are core parts of the AURA customer experience.</p><a class="btn primary magnetic-btn" href="secure.html">Discover AURA Secure</a></div><img src="assets/aura-one.png" alt="AURA One" style="width:100%;max-height:480px;object-fit:contain;filter:drop-shadow(0 20px 45px rgba(60,180,255,.15))"></div></section>
+<section class="magic"><div class="container"><div class="eyebrow">THE AURA PROMISE</div><h2>Technology should feel <span>magical.</span></h2><p>Premium products are only one part of the experience. AURA is designed around care, trust, convenience and long-term customer value.</p><a class="btn primary magnetic-btn" href="services.html">Enter the AURA World</a></div></section>
+<div class="search-modal" id="searchModal"><div class="search-box"><input placeholder="Search AURA..." onkeydown="if(event.key==='Enter'){const q=this.value.toLowerCase();const m={secure:'secure.html',care:'care.html',services:'services.html',exchange:'exchange.html',upgrade:'exchange.html',support:'support.html',about:'about.html'};const k=Object.keys(m).find(x=>q.includes(x));if(k)location.href=m[k]}"><div class="search-hint">Try: Secure, Care, Services, Exchange, Support, About</div></div></div>
+<script>function openSearch(){document.getElementById('searchModal').classList.add('open')}document.addEventListener('click',e=>{if(e.target.id==='searchModal')e.target.classList.remove('open')})</script>
+
+<footer><div class="container foot">
+<div>© 2026 AURA — Where Technology Meets Luxury.</div>
+<div class="footer-links">
+<a href="services.html">Services</a><a href="secure.html">AURA Secure</a><a href="care.html">AURA Care</a><a href="exchange.html">Exchange</a><a href="support.html">Support</a>
+</div>
+</div></footer>
+<script>
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let W,H,pts=[];
+function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight;pts=Array.from({length:Math.min(95,Math.floor(W/15))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.3,a:Math.random()*.55+.1}))}
+function draw(){ctx.clearRect(0,0,W,H);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(85,217,255,${p.a})`;ctx.fill()}requestAnimationFrame(draw)}resize();addEventListener('resize',resize);draw();
+const glow=document.querySelector('.cursor-glow');addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+function openSearch(){document.getElementById('searchModal').classList.add('open');setTimeout(()=>document.getElementById('searchInput').focus(),100)}
+function closeSearch(){document.getElementById('searchModal').classList.remove('open')}
+function runSearch(){const q=document.getElementById('searchInput').value.toLowerCase();const map={secure:'#secure',privacy:'#secure',care:'#care',support:'#support',exchange:'#exchange',upgrade:'#upgrade',rewards:'#rewards',cloud:'#ecosystem',ecosystem:'#ecosystem',phone:'#models'};const key=Object.keys(map).find(k=>q.includes(k));if(key){closeSearch();document.querySelector(map[key]).scrollIntoView({behavior:'smooth'})}}
+</script><script>
+(function(){
+  const canvas=document.getElementById('magic-stars');
+  if(canvas){
+    const c=canvas.getContext('2d'); let w,h,dpr,stars=[];
+    function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;c.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(140,Math.floor(w*h/11000))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.2,a:Math.random(),s:Math.random()*.35+.08}));}
+    function draw(){c.clearRect(0,0,w,h);stars.forEach(s=>{s.y-=s.s;if(s.y<0)s.y=h;s.a+=.015;c.globalAlpha=.25+.25*Math.sin(s.a);c.fillStyle=Math.random()>.5?'#55d9ff':'#c77dff';c.beginPath();c.arc(s.x,s.y,s.r,0,Math.PI*2);c.fill()});requestAnimationFrame(draw)}
+    addEventListener('resize',resize);resize();draw();
+  }
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+  document.querySelectorAll('.magnetic-btn').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px)`});
+    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+  });
+  const bar=document.querySelector('.scroll-indicator i');
+  if(bar)addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.transform=`translateY(${max?scrollY/max*230:0}px)`});
+})();
+</script></body></html>
